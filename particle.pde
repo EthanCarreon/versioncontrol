@@ -3,6 +3,9 @@ class Particle {
   PVector position;
   PVector velocity;
   PVector acceleration;
+  float red;
+  float green;
+  float blue;
   
   Particle(float x, float y){
     position = new PVector(x, y);
@@ -16,6 +19,10 @@ class Particle {
   }
   
   void display(){
+    float red = random(255);
+    float green = random(255);
+    float blue = random(255);
+    fill(red, green, blue);
     ellipse(position.x, position.y, 10, 10);
     if (position.x > height) {
       particles.remove(0);
