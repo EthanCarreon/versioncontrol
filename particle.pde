@@ -17,5 +17,8 @@ class Particle {
   
   void display(){
     ellipse(position.x, position.y, 10, 10);
+    if (position.x > height) {
+      particles.remove(0);
+    }
   }
 }
